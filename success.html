@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Success</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="success-card">
+        <article class="success">
+            <img src="./assets/check64.png"/>
+            <h1>Thanks for subscribing!</h1>
+            <p class="confirmation">A confirmation email has been sent to  <a id="userEmail" href="#">your email</a>. Please open it and click the button inside to confirm your subscription.</p>
+            
+        </article>
+        <button id="subscribeButton" onclick="dismiss()" class="btn">Dismiss Message</button>
+    </main>
+    <script>
+        function dismiss() {
+            window.location.href = '/'; 
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const email = params.get('email');
+            const emailLink = document.getElementById('userEmail');
+            if (email && emailLink) {
+                emailLink.href = 'mailto:' + email;
+                emailLink.textContent = email;
+            }
+        });
+    </script>
+</body>
+</html>
