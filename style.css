@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'Roboto';
+    src:url('fonts/Roboto-Regular.ttf') format('truetype');
+        
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Roboto';
+    src:url('fonts/Roboto-Bold.ttf') format('truetype');
+        
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:hsl(235, 18%, 26%);
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+.card{
+    display: flex;
+    width: 928px;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 34px;
+    border-radius: 36px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.success-card{
+    width: 504px;
+    background-color: white;
+    padding: 56px;
+    border-radius: 36px;
+    justify-content: center;
+}
+
+.success-card button{
+    width: 100%;
+}
+
+.content{
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.success{
+    justify-content: center;
+}
+
+.img-container-desktop{
+    margin: 0;
+    padding: 0;
+    width: 40%;
+}
+
+.img-container-mobile{
+    display: none;
+  overflow: hidden;
+}
+
+
+.img-container-desktop img{
+    width: 100%;
+}
+
+ul.checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+ul.checklist li {
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+}
+
+li{
+    font-size: 16px;
+    color: #242742;
+}
+
+
+ul.checklist li::before {
+    content: url("./assets/check.svg");
+    margin-right: 20px; 
+    display: block; 
+}
+
+.btn{
+    height: 56px;
+}
+
+.emailText{
+    font-size: 12px;
+    font-weight: bolder;
+    width: 50%;
+    margin-bottom: 8px;
+    color: #242742;
+ 
+}
+
+.email{
+    height: 56px;
+    padding-right: 20px;
+ 
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.emailLabel{
+    margin-top:30px;
+    display: flex;
+    width: 94%;
+    
+}
+
+.error{
+    text-align: right;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(255, 97, 85);
+    display: none;
+
+}
+
+
+input{
+    margin-right: 24px;
+    padding: 10px 20px;
+    font-family: inherit;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #D8D8D8;
+}
+
+input.error{
+    border-color: #FF6155;
+    background-color: #FFEBEB; 
+}
+
+input:focus {
+    border: 2px solid hsl(234, 29%, 20%); 
+}
+
+.cta-text{
+    font-size: 16px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #242742;
+}
+
+.confirmation{
+    font-size: 16px;
+    padding-bottom: 20px;
+    color: #242742;
+}
+
+h1{
+    font-size: 56px;
+    color: #242742;
+    margin-bottom: 20px;
+}
+
+button{
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 0px;
+    border-radius: 8px;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #FF6A3A, #FF527B); 
+    box-shadow: 0px 10px 50px rgba(255, 82, 82, 0.5);
+}
+a {
+    text-decoration: none; 
+    font-weight:700;
+    color: #242742;
+}
+
+@media (max-width:928px) {
+    .card{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0%;
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+        align-self: first baseline;
+    }
+
+    .success{
+        padding-top: 120px;
+    }
+
+    .success-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0%;
+        width: 100%;
+        height: 100vh;
+        padding: 26px;
+        margin: 0%;
+        max-width: 100%;
+        align-self: first baseline;
+        
+    }
+
+    .success-card h1{
+        font-size: 40px;
+        overflow-wrap: anywhere;
+    }
+
+    .success-card button{
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+
+    .card h1{
+        font-size: 40px;
+    }
+
+    .content{
+        padding-left: 24px;
+        padding-right: 0px;
+        padding-bottom: 25px;
+        width: auto;
+        height: auto;
+
+
+        h1{
+            justify-content: center;
+        }
+    }
+    
+    .img-container-desktop{
+        margin: 0px;
+        padding: 0px;
+        display: none;
+        width: 100%;
+    }
+
+    .img-container-mobile{
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        width: auto;
+        height: inherit;
+
+        img{
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        height: auto;
+        align-items: normal;
+     
+    }
+
+    html{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    form{
+        width: 100%;
+
+    }
+
+    .emailLabel{
+        width: 100%;
+        padding-right: 30px;
+    }
+
+
+    
+}
