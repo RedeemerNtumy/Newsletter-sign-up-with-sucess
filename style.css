@@ -184,6 +184,7 @@ h1{
     font-size: 56px;
     color: #242742;
     margin-bottom: 20px;
+    margin-top: 35x;
 }
 
 button{
@@ -242,11 +243,13 @@ a {
     .success-card h1{
         font-size: 40px;
         overflow-wrap: anywhere;
+        margin-bottom: 30px;
     }
 
     .success-card button{
         padding-left: 10px;
         padding-right: 10px;
+        margin-bottom: 20px;
     
     }
 
